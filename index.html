@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karan Chandra Kothari - BCA Student & AI/Data Science Enthusiast. Personal portfolio showcasing projects, skills, and resume." />
+  <title>Karan Chandra Kothari | Portfolio</title>
+
+  <!-- Link to stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Boxicons for icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== NAVBAR TOP ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Karan Chandra Kothari Home">
+         <i class='bx bxs-graduation'></i>
+        <span class="logo-bracket" class='bx bxs-graduation'>Portfolio</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home"     class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"   class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"  class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#resume"  class="nav-link" data-section="resume">Resume</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Right-side controls -->
+      <div class="nav-controls">
+        <!-- Dark / Light Mode Toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class='bx bx-moon' id="theme-icon"></i>
+        </button>
+
+        <!-- Hamburger for mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home" aria-label="Hero Introduction">
+    <!-- Animated background blobs -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <!-- Profile Image -->
+      <div class="hero-image reveal">
+        <div class="image-wrapper">
+          <div class="image-ring" aria-hidden="true"></div>
+          <img
+            src="Business_Portrait.jpg"
+            alt="Karan Chandra Kothari profile avatar"
+            class="profile-img"
+            id="profile-img"
+          />
+        </div>
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text reveal">
+        <p class="hero-greeting">Hi There, I'm</p>
+        <h1 class="hero-name">Karan Chandra Kothari</h1>
+
+        <!-- Typing effect container -->
+        <h2 class="hero-title">
+          Pursuing Bachelor's in (Ai&Ds)🎓
+
+          <span id="typed-text"></span><span class="cursor" aria-hidden="true">|</span>
+        </h2>
+        <p class="hero-intro">
+         I'm a Front-End Developer & Data Analytics enthusiast who loves turning codes and raw data
+          into meaningful and logical insights and ideas into clean, user-friendly interfaces. 
+          I enjoy working at the intersection of data, design, and functionality, where logic 
+          meets creativity...
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class='bx bx-code-block'></i> View Projects
+          </a>
+          <a href="Karan_Chandra_Kothari_Resume.pdf" class="btn btn-secondary" download aria-label="Download Resume PDF">
+            <i class='bx bx-download'></i> Download Resume
+          </a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="hero-socials" aria-label="Social media links">
+          <a href="https://github.com/Karan-oop" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+          <a href="https://www.linkedin.com/in/karan-chandra-kothari-a36a2b382/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+          <a href="https://x.com/chandraXkaran" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter / X">
+            <i class='bx bxl-twitter'></i>
+          </a>
+          <a href="mailto:kotharikaran07@gmail.com" class="social-icon" aria-label="Email">
+            <i class='bx bx-envelope'></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+      <div class="scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ========== ROLES/SERVICES SECTION ========== -->
+  <section class="roles section" id="about" aria-label="Professional Roles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Introduction</span>
+        <h2 class="section-title">Overview<span class="dot">.</span></h2>
+      </div>
+
+      <p class="roles-intro reveal">
+        I'm a passionate developer exploring multiple specializations in modern web development. 
+        Here are the key areas I focus on and excel at.
+      </p>
+
+      <div class="roles-grid">
+        <div class="role-card glass-card reveal" tabindex="0">
+          <div class="role-icon" aria-hidden="true">
+            <i class='bx bx-code'></i>
+          </div>
+          <h3 class="role-title">Front-End Developer</h3>
+          <p class="role-desc">Building responsive, dynamic websites with modern technologies and best practices.</p>
+        </div>
+
+        <div class="role-card glass-card reveal" tabindex="0">
+          <div class="role-icon" aria-hidden="true">
+            <i class='bx bxl-figma'></i>
+          </div>
+          <h3 class="role-title">Figma Designer</h3>
+          <p class="role-desc">Creating interactive UIs with Figma, design systems, and prototyping tools.</p>
+        </div>
+
+        <div class="role-card glass-card reveal" tabindex="0">
+          <div class="role-icon" aria-hidden="true">
+            <i class='bx bx-server'></i>
+          </div>
+          <h3 class="role-title">Data Analyst</h3>
+          <p class="role-desc">Analyzing complex datasets to extract actionable insights and drive data-informed decisions.</p>
+        </div>
+
+        <div class="role-card glass-card reveal" tabindex="0">
+          <div class="role-icon" aria-hidden="true">
+            <i class='bx bx-edit'></i>
+          </div>
+          <h3 class="role-title">Tech Enthusiast</h3>
+          <p class="role-desc">Passionate about learning new technologies and sharing knowledge with others.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about section" id="detailed-about" aria-label="About Me">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get To Know</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Image Side -->
+        <div class="about-image reveal">
+          <div class="about-img-wrapper">
+            <img
+              src="Karan_Portrait.jpg"
+              alt="Karan Chandra Kothari studying"
+              class="about-img"
+            />
+            <div class="about-badge">
+              <i class='bx bx-code-alt'></i>
+              <span>Undergraduate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Side -->
+        <div class="about-content reveal">
+          <p class="about-description">
+            I'm <strong>Karan Chandra Kothari</strong>, a passionate student with a deep interest in
+            Artificial Intelligence and Data Science. I love turning complex data into meaningful
+            insights and building smart applications that solve real-world problems.
+          </p>
+          <p class="about-description">
+            I have a strong foundation in PYTHON, OOPS, Power BI, Figma ,HTML, and CSS, 
+            I analyze data to uncover meaningful patterns and build visually engaging 
+            front-end experiences. I believe good data tells a story—and great front-end 
+            design makes sure that story is understood by everyone.
+          </p>
+
+          <!-- Education Info -->
+          <div class="about-info-cards">
+            <div class="info-card glass-card">
+              <i class='bx bxs-graduation'></i>
+              <div>
+                <h4>Education</h4>
+                <p>Bachelor of Computer Applications In (AI&DS)</p>
+                <small>2025 – 2028</small>
+              </div>
+            </div>
+            <div class="info-card glass-card">
+              <i class='bx bxs-map'></i>
+              <div>
+                <h4>Location</h4>
+                <p>India, New Delhi</p>
+                <small>Available for Remote Work and as well as on-site.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Career Goal -->
+          <div class="career-goal glass-card">
+            <i class='bx bxs-rocket' aria-hidden="true"></i>
+            <p>
+              <strong>Career Goal:</strong> To become a full-stack AI engineer — building scalable,
+              intelligent systems that create meaningful impact in the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="skills section" id="skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Skill Card: HTML -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon html-icon" aria-hidden="true">
+            <i class='bx bxl-html5'></i>
+          </div>
+          <h3 class="skill-name">HTML</h3>
+          <p class="skill-desc">Semantic markup, accessibility, SEO best practices</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML proficiency 90%">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+
+        <!-- Skill Card: CSS -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon css-icon" aria-hidden="true">
+            <i class='bx bxl-css3'></i>
+          </div>
+          <h3 class="skill-name">CSS</h3>
+          <p class="skill-desc">Flexbox, Grid, animations, responsive design</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS proficiency 90%">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+
+        <!-- Skill Card: JavaScript -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon js-icon" aria-hidden="true">
+            <i class='bx bxl-javascript'></i>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+          <p class="skill-desc">ES6+, DOM manipulation, async programming</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 90%">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+
+        <!-- Skill Card: Python -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon python-icon" aria-hidden="true">
+            <i class='bx bxl-python'></i>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-desc">Data analysis, scripting, ML libraries</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 80%">
+            <div class="skill-fill" data-width="80"></div>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+
+        <!-- Skill Card: Figma -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon figma-icon" aria-hidden="true">
+            <i class='bx bxl-figma'></i>
+          </div>
+          <h3 class="skill-name">Figma</h3>
+          <p class="skill-desc">NoSQL databases, CRUD operations, aggregation</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="MongoDB proficiency 70%">
+            <div class="skill-fill" data-width="70"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+
+        <!-- Skill Card: AWS -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon aws-icon" aria-hidden="true">
+            <i class='bx bxl-aws'></i>
+          </div>
+          <h3 class="skill-name">AWS</h3>
+          <p class="skill-desc">Cloud computing, S3, EC2, Lambda basics</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="AWS proficiency 60%">
+            <div class="skill-fill" data-width="60"></div>
+          </div>
+          <span class="skill-percent">60%</span>
+        </div>
+
+        <!-- Skill Card: Git -->
+        <div class="skill-card glass-card reveal" tabindex="0">
+          <div class="skill-icon git-icon" aria-hidden="true">
+            <i class='bx bxl-git'></i>
+          </div>
+          <h3 class="skill-name">Git</h3>
+          <p class="skill-desc">Version control, branching, GitHub workflows</p>
+          <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Git proficiency 82%">
+            <div class="skill-fill" data-width="82"></div>
+          </div>
+          <span class="skill-percent">82%</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="projects section" id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card glass-card reveal" tabindex="0">
+          <div class="project-img-wrapper">
+            <img
+              src="https://cdn.dribbble.com/userupload/12803821/file/original-5198e7dfd68dac50167ab568b6d209f0.jpg?format=webp&resize=1440x&vertical=center"
+              alt="Live Weather Monitoring Webpage"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Live Weather Monitoring Webpage</h3>
+            <p class="project-desc">
+              A real-time weather monitoring web app that displays current conditions and forecasts for various locations.
+              Features interactive maps, detailed weather information, and location-based alerts.
+            </p>
+            <div class="tech-stack" aria-label="Technologies used">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/Karan-oop/Meteo_Pulse_Weather_Tracker.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://karan-oop.github.io/Meteo_Pulse_Weather_Tracker/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class='bx bxl-chrome'></i> Live Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass-card reveal" tabindex="0">
+          <div class="project-img-wrapper">
+            <img
+              src="https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/419d119d01cba317f0ad48276312d97eb3d8fe2d/1ca1ecfebad2e53843dcce7d7bedbbe698ed1914"
+              alt="Smart Event Management Dashboard"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Smart Event Management Dashboard</h3>
+            <p class="project-desc">
+              An interactive dashboard for visualizing datasets with charts, filters, and
+              statistical summaries. Built with Python for data processing and dynamic JS charts.
+            </p>
+            <div class="tech-stack" aria-label="Technologies used">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/Karan-oop/Smart_Event_Management_Dashboard.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class='bx bxl-github'></i> GitHub
+              </a>
+              <a href="https://karan-oop.github.io/Smart_Event_Management_Dashboard/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class='bx bxl-chrome'></i> Live Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass-card reveal" tabindex="0">
+          <div class="project-img-wrapper">
+            <img
+              src="https://canvify.app/images/valentines-day-website-template/featured.png"
+              alt="Valentine Day Special"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Valentine Day Special</h3>
+            <p class="project-desc">
+               I built something fun! 🎉
+               Just wrapped up a front-end project that's all about Valentine vibes — 
+               featuring two different user journeys: Single and Mingle.
+               It's a playful take on the Valentine's Day experience, 
+               designed to bring a smile to your face and maybe even spark some connections! 💖
+            </p>
+            <div class="tech-stack" aria-label="Technologies used">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/Karan-oop/Valentine_Day_Special.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class='bx bxl-github'></i> GitHub
+              </a>
+              <a href="https://karan-oop.github.io/Valentine_Day_Special/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class='bx bxl-chrome'></i> Live Demo
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESUME SECTION ========== -->
+  <section class="resume section" id="resume" aria-label="Resume">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Resume &amp; <span class="gradient-text">Timeline</span></h2>
+      </div>
+
+      <!-- Download Button -->
+      <div class="resume-download reveal">
+        <a href="Karan_Chandra_Kothari_Resume.pdf" class="btn btn-primary" download aria-label="Download Resume PDF">
+          <i class='bx bx-download'></i> Download Resume
+        </a>
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="timeline" aria-label="Education Timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <span class="timeline-date">2025 – 2028</span>
+            </div>
+            <p class="timeline-institution">
+              <i class='bx bxs-school'></i> K.R Mangalam University, India
+            </p>
+            <p class="timeline-desc">
+              Studying core subjects including Data Structures, Algorithms, Database Management,
+              Artificial Intelligence, and Web Technologies. Maintaining strong academic performance.
+            </p>
+            <div class="timeline-tags">
+              <span class="tech-tag">Web Development</span>
+              <span class="tech-tag">Data Science</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Higher Secondary School (HSS)</h3>
+              <span class="timeline-date">2022 – 2024</span>
+            </div>
+            <p class="timeline-institution">
+              <i class='bx bxs-school'></i> Govt CO-ED Sr Sec School (Preet Vihar), India
+            </p>
+            <p class="timeline-desc">
+              Completed 12th grade with Commerce stream (Commerce + I.T)
+              Developed a strong foundation in mathematics, logic, and programming fundamentals.
+            </p>
+            <div class="timeline-tags">
+              <span class="tech-tag">Commerce</span>
+              <span class="tech-tag">Mathematics</span>
+              <span class="tech-tag">Information Technology (I.T)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact section" id="contact" aria-label="Contact Me">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <h3>Let's collaborate together!</h3>
+          <p>
+            Feel free to reach out — for software engineering opportunities, collaborations,
+             or technical discussions.
+            <br />
+             I'm always open to working on impactful engineering projects. 
+            I'm always open to new opportunities, collaborations, and conversations.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item glass-card">
+              <i class='bx bx-envelope'></i>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:kotharikaran07@gmail.com">kotharikaran07@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <i class='bx bxl-github'></i>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/Karan-oop" target="_blank" rel="noopener noreferrer">github.com/Karan-oop</a>
+              </div>
+            </div>
+            <div class="contact-item glass-card">
+              <i class='bx bxl-linkedin'></i>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/karan-chandra-kothari-a36a2b382" target="_blank" rel="noopener noreferrer">linkedin.com/in/karan-chandra-kothari</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+
+        <div class="contact-form-wrapper reveal">
+          <form id="contact-form" class="contact-form glass-card" novalidate aria-label="Contact Form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <div class="input-wrapper">
+                <i class='bx bx-user' aria-hidden="true"></i>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Full Name"
+                  autocomplete="name"
+                  aria-required="true"
+                />
+              </div>
+              <span class="error-msg" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="input-wrapper">
+                <i class='bx bx-envelope' aria-hidden="true"></i>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@gmail.com"
+                  autocomplete="email"
+                  aria-required="true"
+                />
+              </div>
+              <span class="error-msg" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class='bx bx-message-detail' aria-hidden="true"></i>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  aria-required="true"
+                ></textarea>
+              </div>
+              <span class="error-msg" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span class="btn-text"><i class='bx bx-send'></i> Send Message</span>
+              <span class="btn-loading" style="display:none;">
+                <i class='bx bx-loader-alt bx-spin'></i> Sending...
+              </span>
+            </button>
+
+            <!-- Success message -->
+            <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
+              <i class='bx bx-check-circle'></i>
+              <p>Your message has been sent successfully! I'll get back to you soon.</p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+
+      <!-- Footer Brand -->
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" aria-label="Back to top">
+          <span class="logo-bracket"></span><span class="logo-bracket">Thank You</span>
+        </a>
+        <p><span aria-label="love"> </span>Feel free to reach out!</p>
+      </div>
+
+      <!-- Footer Social Links -->
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="https://github.com/Karan-oop" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://linkedin.com/in/karan-chandra-kothari-a36a2b382" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://x.com/chandraXkaran" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+          <i class='bx bxl-twitter'></i>
+        </a>
+        <a href="mailto:kotharikaran07@gmail.com" class="social-icon" aria-label="Email">
+          <i class='bx bx-envelope'></i>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copy">
+        <p>&copy; 2026 | Karan Chandra Kothari | All rights reserved </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>
+    <i class='bx bx-chevron-up'></i>
+  </button>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!--End Of Code Statement -->
