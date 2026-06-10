@@ -27,10 +27,7 @@
     <div class="nav-container">
 
       <!-- Logo -->
-      <a href="#home" class="nav-logo" aria-label="Karan Chandra Kothari Home">
-         <i class='bx bxs-graduation'></i>
-        <span class="logo-bracket" class='bx bxs-graduation'>Portfolio</span>
-      </a>
+      <a href="#home" class="nav-logo" aria-label="Karan Chandra Kothari Home"><span class="gradient-text">KCK</span></a>
 
       <!-- Desktop Nav Links -->
       <ul class="nav-links" id="nav-links" role="list">
@@ -44,6 +41,13 @@
 
       <!-- Right-side controls -->
       <div class="nav-controls">
+        
+        <!-- Available for Work Badge -->
+        <div class="availability-badge" id="availability-badge">
+          <span class="pulse-dot"></span>
+          <span class="badge-text">Open To Work</span>
+        </div>
+
         <!-- Dark / Light Mode Toggle -->
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
           <i class='bx bx-moon' id="theme-icon"></i>
@@ -60,7 +64,6 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
   <section class="hero" id="home" aria-label="Hero Introduction">
     <!-- Animated background blobs -->
     <div class="hero-bg" aria-hidden="true">
@@ -70,35 +73,25 @@
     </div>
 
     <div class="hero-container">
-      <!-- Profile Image -->
-      <div class="hero-image reveal">
-        <div class="image-wrapper">
-          <div class="image-ring" aria-hidden="true"></div>
-          <img
-            src="Business_Portrait.jpg"
-            alt="Karan Chandra Kothari profile avatar"
-            class="profile-img"
-            id="profile-img"
-          />
-        </div>
-      </div>
 
-      <!-- Hero Text -->
+      <!-- Hero Text (LEFT column) -->
       <div class="hero-text reveal">
         <p class="hero-greeting">Hi There, I'm</p>
+
+        <!-- Prompt 12: hero-name gets .hero-name class for char reveal JS -->
         <h1 class="hero-name">Karan Chandra Kothari</h1>
 
-        <!-- Typing effect container -->
-        <h2 class="hero-title">
-          Pursuing Bachelor's in (Ai&Ds)🎓
-
+        <!-- Prompt 13: clean subheading, no emoji -->
+        <h1 class="hero-title">
+          Frontend Developer &amp; Data Analytics
           <span id="typed-text"></span><span class="cursor" aria-hidden="true">|</span>
-        </h2>
+        </h1>
+
+      
         <p class="hero-intro">
-         I'm a Front-End Developer & Data Analytics enthusiast who loves turning codes and raw data
-          into meaningful and logical insights and ideas into clean, user-friendly interfaces. 
-          I enjoy working at the intersection of data, design, and functionality, where logic 
-          meets creativity...
+          I'm a Front-End Developer & Data Analytics enthusiast who loves 
+          turning codes and raw data into meaningful and logical insights and ideas 
+          into clean, user-friendly interfaces. I enjoy working at the intersection of data, design, and functionality, where logic meets creativity...
         </p>
 
         <!-- CTA Buttons -->
@@ -127,6 +120,21 @@
           </a>
         </div>
       </div>
+
+      <!-- Profile Image (RIGHT column) (rectangular, no ring) -->
+      <div class="hero-image reveal">
+        <div class="image-wrapper">
+          <!-- Decorative glow behind photo -->
+          <div class="hero-photo-glow" aria-hidden="true"></div>
+          <img
+            src="Business_Portrait.jpg"
+            alt="Karan Chandra Kothari profile photo"
+            class="profile-img"
+            id="profile-img"
+          />
+        </div>
+      </div>
+
     </div>
 
     <!-- Scroll Down Indicator -->
@@ -262,113 +270,80 @@
         <span class="section-tag">What I Know</span>
         <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
       </div>
-
-      <div class="skills-grid">
-
-        <!-- Skill Card: HTML -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon html-icon" aria-hidden="true">
-            <i class='bx bxl-html5'></i>
+      <div class="skills-bento">
+        <!-- Card 1 — Frontend (spans 3 cols, 2 rows) -->
+        <div class="bento-card bento-frontend reveal" tabindex="0">
+          <i class='bx bx-code-alt bento-bg-icon' aria-hidden="true"></i>
+          <div class="bento-card-header">
+            <h3 class="bento-card-title">Frontend</h3>
           </div>
-          <h3 class="skill-name">HTML</h3>
-          <p class="skill-desc">Semantic markup, accessibility, SEO best practices</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML proficiency 90%">
-            <div class="skill-fill" data-width="100"></div>
+          <div class="chips-container">
+            <span class="skill-chip html5"><i class='bx bxl-html5'></i> HTML5</span>
+            <span class="skill-chip css3"><i class='bx bxl-css3'></i> CSS3</span>
+            <span class="skill-chip javascript"><i class='bx bxl-javascript'></i> JavaScript ES6+</span>
+            <span class="skill-chip bootstrap"><i class='bx bxl-bootstrap'></i> Bootstrap</span>
+             <span class="skill-chip react"><i class='bx bxl-react'></i> React</span>
+            <span class="skill-chip nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
           </div>
-          <span class="skill-percent"></span>
         </div>
 
-        <!-- Skill Card: CSS -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon css-icon" aria-hidden="true">
-            <i class='bx bxl-css3'></i>
+        <!-- Card 2 — Design Tools (spans 3 cols, 1 row) -->
+        <div class="bento-card bento-design reveal" tabindex="0">
+          <i class='bx bx-palette bento-bg-icon' aria-hidden="true"></i>
+          <div class="bento-card-header">
+            <h3 class="bento-card-title">Design Tools</h3>
           </div>
-          <h3 class="skill-name">CSS</h3>
-          <p class="skill-desc">Flexbox, Grid, animations, responsive design</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS proficiency 90%">
-            <div class="skill-fill" data-width="100"></div>
+          <div class="chips-container">
+            <span class="skill-chip figma"><i class='bx bxl-figma'></i> Figma</span>
+            <span class="skill-chip uiux"><i class='bx bx-palette'></i> UI/UX</span>
+            <span class="skill-chip prototyping"><i class='bx bx-navigation'></i> Prototyping</span>
+            <span class="skill-chip design-systems"><i class='bx bx-layout'></i> Design Systems</span>
           </div>
-          <span class="skill-percent"></span>
         </div>
 
-        <!-- Skill Card: JavaScript -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon js-icon" aria-hidden="true">
-            <i class='bx bxl-javascript'></i>
+        <!-- Card 3 — Data & Analytics (spans 3 cols, 1 row) -->
+        <div class="bento-card bento-data reveal" tabindex="0">
+          <i class='bx bx-bar-chart-alt-2 bento-bg-icon' aria-hidden="true"></i>
+          <div class="bento-card-header">
+            <h3 class="bento-card-title">Data & Analytics</h3>
           </div>
-          <h3 class="skill-name">JavaScript</h3>
-          <p class="skill-desc">ES6+, DOM manipulation, async programming</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 90%">
-            <div class="skill-fill" data-width="100"></div>
+          <div class="chips-container">
+            <span class="skill-chip python"><i class='bx bxl-python'></i> Python</span>
+            <span class="skill-chip data-analytics"><i class='bx bx-bar-chart-alt-2'></i> Data Analytics</span>
+            <span class="skill-chip chartjs"><i class='bx bx-line-chart'></i> Chart.js</span>
+            <span class="skill-chip stats"><i class='bx bx-analyse'></i> Statistical Analysis</span>
           </div>
-          <span class="skill-percent"></span>
         </div>
 
-        <!-- Skill Card: Bootstrap -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon bootstrap-icon" aria-hidden="true">
-            <i class='bx bxl-bootstrap'></i>
+        <!-- Card 4 — Dev Tools (spans 2 cols, 1 row) -->
+        <div class="bento-card bento-dev reveal" tabindex="0">
+          <i class='bx bx-wrench bento-bg-icon' aria-hidden="true"></i>
+          <div class="bento-card-header">
+            <h3 class="bento-card-title">Dev Tools</h3>
           </div>
-          <h3 class="skill-name">Bootstrap</h3>
-          <p class="skill-desc">Responsive layouts, UI components, grid system, rapid development</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Bootstrap proficiency 100%">
-            <div class="skill-fill" data-width="100"></div>
+          <div class="chips-container">
+            <span class="skill-chip git"><i class='bx bxl-git'></i> Git</span>
+            <span class="skill-chip github"><i class='bx bxl-github'></i> GitHub</span>
+            <span class="skill-chip vscode"><i class='bx bx-code'></i> VS Code</span>
+            <span class="skill-chip cli"><i class='bx bx-terminal'></i> CLI</span>
           </div>
-          <span class="skill-percent"></span>
         </div>
 
-        <!-- Skill Card: React -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon react-icon" aria-hidden="true">
-            <i class='bx bxl-react'></i>
+        <!-- Card 5 — Currently Learning (spans 4 cols, 1 row) -->
+        <div class="bento-card bento-learning reveal bento-dashed" tabindex="0">
+          <i class='bx bx-brain bento-bg-icon' aria-hidden="true"></i>
+          <div class="bento-card-header">
+            <div class="title-with-badge">
+              <h3 class="bento-card-title">Currently Learning</h3>
+              <span class="badge badge-inprogress">In Progress</span>
+            </div>
           </div>
-          <h3 class="skill-name">React</h3>
-          <p class="skill-desc">Component-based architecture, state management, hooks</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="React proficiency 75%">
-            <div class="skill-fill" data-width="100"></div>
+          <div class="chips-container">
+            <span class="skill-chip react"><i class='bx bxl-react'></i> React</span>
+            <span class="skill-chip nodejs"><i class='bx bxl-nodejs'></i> Node.js</span>
+            <span class="skill-chip ml"><i class='bx bx-brain'></i> Machine Learning</span>
           </div>
-          <span class="skill-percent"></span>
         </div>
-
-        <!-- Skill Card: Python -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon python-icon" aria-hidden="true">
-            <i class='bx bxl-python'></i>
-          </div>
-          <h3 class="skill-name">Python</h3>
-          <p class="skill-desc">Data analysis, scripting, ML libraries</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 80%">
-            <div class="skill-fill" data-width="100"></div>
-          </div>
-          <span class="skill-percent"></span>
-        </div>
-
-        <!-- Skill Card: Git -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon git-icon" aria-hidden="true">
-            <i class='bx bxl-git'></i>
-          </div>
-          <h3 class="skill-name">Git</h3>
-          <p class="skill-desc">Version control, branching, GitHub workflows</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Git proficiency 82%">
-            <div class="skill-fill" data-width="100"></div>
-          </div>
-          <span class="skill-percent"></span>
-        </div>
-
-        <!-- Skill Card: Figma -->
-        <div class="skill-card glass-card reveal" tabindex="0">
-          <div class="skill-icon figma-icon" aria-hidden="true">
-            <i class='bx bxl-figma'></i>
-          </div>
-          <h3 class="skill-name">Figma</h3>
-          <p class="skill-desc">UI/UX design, prototyping, collaboration</p>
-          <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Figma proficiency 70%">
-            <div class="skill-fill" data-width="100"></div>
-          </div>
-          <span class="skill-percent"></span>
-        </div>
-
       </div>
     </div>
   </section>  
@@ -378,6 +353,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">What I've Built</span>
+        <!-- Prompt 3: no colored span trick -->
         <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
       </div>
 
@@ -392,8 +368,9 @@
               class="project-img"
               loading="lazy"
             />
+            <!-- Prompt 8: updated overlay -->
             <div class="project-overlay" aria-hidden="true">
-              <span>View Project</span>
+              <span>View Project →</span>
             </div>
           </div>
           <div class="project-info">
@@ -402,6 +379,8 @@
               A real-time weather monitoring web app that displays current conditions and forecasts for various locations.
               Features interactive maps, detailed weather information, and location-based alerts.
             </p>
+            <!-- Prompt 9: outcome metric -->
+            <p class="project-outcome">→ Real-time data from Open-Meteo API · Geolocation + animated canvas</p>
             <div class="tech-stack" aria-label="Technologies used">
               <span class="tech-tag">HTML</span>
               <span class="tech-tag">CSS</span>
@@ -426,7 +405,7 @@
               loading="lazy"
             />
             <div class="project-overlay" aria-hidden="true">
-              <span>View Project</span>
+              <span>View Project →</span>
             </div>
           </div>
           <div class="project-info">
@@ -435,6 +414,8 @@
               An interactive dashboard for visualizing datasets with charts, filters, and
               statistical summaries. Built with Python for data processing and dynamic JS charts.
             </p>
+            <!-- Prompt 9: outcome metric -->
+            <p class="project-outcome">→ Python backend · Interactive charts + statistical summaries</p>
             <div class="tech-stack" aria-label="Technologies used">
               <span class="tech-tag">HTML</span>
               <span class="tech-tag">CSS</span>
@@ -442,8 +423,8 @@
             </div>
             <a href="https://github.com/Karan-oop/Smart_Event_Management_Dashboard.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
               <i class='bx bxl-github'></i> GitHub
-              </a>
-              <a href="https://karan-oop.github.io/Smart_Event_Management_Dashboard/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            </a>
+            <a href="https://karan-oop.github.io/Smart_Event_Management_Dashboard/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
               <i class='bx bxl-chrome'></i> Live Demo
             </a>
           </div>
@@ -459,18 +440,17 @@
               loading="lazy"
             />
             <div class="project-overlay" aria-hidden="true">
-              <span>View Project</span>
+              <span>View Project →</span>
             </div>
           </div>
           <div class="project-info">
             <h3 class="project-title">Valentine Day Special</h3>
             <p class="project-desc">
-               I built something fun! 🎉
-               Just wrapped up a front-end project that's all about Valentine vibes — 
-               featuring two different user journeys: Single and Mingle.
-               It's a playful take on the Valentine's Day experience, 
-               designed to bring a smile to your face and maybe even spark some connections! 💖
+              A playful frontend project featuring two different user journeys: Single and Mingle.
+              Designed to bring a smile and spark connections with an interactive Valentine's Day experience.
             </p>
+            <!-- Prompt 9: outcome metric -->
+            <p class="project-outcome">→ Dual user journey flows · Responsive across all screen sizes</p>
             <div class="tech-stack" aria-label="Technologies used">
               <span class="tech-tag">HTML</span>
               <span class="tech-tag">CSS</span>
@@ -478,8 +458,8 @@
             </div>
             <a href="https://github.com/Karan-oop/Valentine_Day_Special.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
               <i class='bx bxl-github'></i> GitHub
-              </a>
-              <a href="https://karan-oop.github.io/Valentine_Day_Special/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            </a>
+            <a href="https://karan-oop.github.io/Valentine_Day_Special/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
               <i class='bx bxl-chrome'></i> Live Demo
             </a>
           </div>
@@ -494,7 +474,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">My Journey</span>
-        <h2 class="section-title">Resume<span class="gradient-text">Timeline</span></h2>
+        <h2 class="section-title">Resume <span class="gradient-text">Timeline</span></h2>
       </div>
 
       <!-- Download Button -->
@@ -567,13 +547,10 @@
 
         <!-- Contact Info -->
         <div class="contact-info reveal">
-          <h3>Let's collaborate together!</h3>
+          <h2>Let's collaborate together!</h2>
           <p>
             Feel free to reach out — for software engineering opportunities, collaborations,
-             or technical discussions.
-            <br />
-             I'm always open to working on impactful engineering projects. 
-            I'm always open to new opportunities, collaborations, and conversations.
+            or technical discussions. I'm always open to working on impactful projects.
           </p>
 
           <div class="contact-details">
@@ -600,7 +577,6 @@
             </div>
           </div>
         </div>
-
         <!-- Contact Form -->
 
         <div class="contact-form-wrapper reveal">
@@ -672,37 +648,41 @@
   </section>
 
   <!-- ========== FOOTER ========== -->
+
   <footer class="footer" role="contentinfo">
     <div class="footer-container">
-
-      <!-- Footer Brand -->
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo" aria-label="Back to top">
-          <span class="logo-bracket"></span><span class="logo-bracket">Thank You</span>
-        </a>
-        <p><span aria-label="love"> </span>Feel free to reach out!</p>
-      </div>
-
-      <!-- Footer Social Links -->
+      
+      <!-- Top Line: Brand tagline -->
+      <p class="footer-tagline">Building at the intersection of data &amp; frontend.</p>
+      
+      <!-- Location Line -->
+      <p class="footer-location">New Delhi, India · Open to remote opportunities</p>
+      
+      <!-- Social Icons Row -->
       <div class="footer-socials" aria-label="Social media links">
-        <a href="https://github.com/Karan-oop" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+        <a href="https://github.com/Karan-oop" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
           <i class='bx bxl-github'></i>
         </a>
-        <a href="https://linkedin.com/in/karan-chandra-kothari-a36a2b382" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/karan-chandra-kothari-a36a2b382" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
           <i class='bx bxl-linkedin'></i>
         </a>
-        <a href="https://x.com/chandraXkaran" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+        <a href="https://x.com/chandraXkaran" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Twitter">
           <i class='bx bxl-twitter'></i>
         </a>
-        <a href="mailto:kotharikaran07@gmail.com" class="social-icon" aria-label="Email">
+        <a href="mailto:kotharikaran07@gmail.com" class="footer-social-icon" aria-label="Email">
           <i class='bx bx-envelope'></i>
         </a>
       </div>
 
-      <!-- Copyright -->
-      <div class="footer-copy">
-        <p>&copy; 2026 | Karan Chandra Kothari | All rights reserved </p>
+      <!-- Divider -->
+      <hr class="footer-divider" />
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 | Karan Chandra Kothari</p>
+        <p class="footer-built">All rights reserved</p>
       </div>
+
     </div>
   </footer>
 

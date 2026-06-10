@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initTypingEffect();
   initScrollReveal();
-  initSkillBars();
   initScrollProgress();
   initBackToTop();
   initContactForm();
@@ -145,10 +144,10 @@ function initTypingEffect() {
 
   // Strings to cycle through
   const phrases = [
-    '| Frontend Developer 🤖',
-    '| Figma Designer 💻',
-    '| Data Analyst🧩',
-    '| Open Source Contributor 🌐',
+    '| Frontend Developer',
+    '| Figma Designer',
+    '| Data Analyst',
+    '| Open Source Contributor',
   ];
 
   let phraseIndex = 0;
@@ -222,32 +221,7 @@ function initScrollReveal() {
 }
 
 
-/* ==========================================================================
-   6. Skill Bars — Animate width when in view
-   ========================================================================== */
-function initSkillBars() {
-  const fills = document.querySelectorAll('.skill-fill');
-  if (!fills.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const fill    = entry.target;
-          const percent = fill.dataset.width || '0';
-          // Defer slightly so CSS transition is visible
-          requestAnimationFrame(() => {
-            fill.style.width = `${percent}%`;
-          });
-          observer.unobserve(fill);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  fills.forEach(fill => observer.observe(fill));
-}
 
 
 /* ==========================================================================
@@ -464,12 +438,12 @@ function setFooterYear() {
   if (!wrapper) return;
 
   wrapper.addEventListener('mousemove', (e) => {
-    const rect   = wrapper.getBoundingClientRect();
-    const x      = e.clientX - rect.left - rect.width  / 2;
-    const y      = e.clientY - rect.top  - rect.height / 2;
-    const tiltX  = -(y / rect.height) * 12; // max 12deg tilt
-    const tiltY  =  (x / rect.width)  * 12;
-    wrapper.style.transform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.03)`;
+    const rect  = wrapper.getBoundingClientRect();
+    const x     = e.clientX - rect.left - rect.width  / 2;
+    const y     = e.clientY - rect.top  - rect.height / 2;
+    const tiltX = -(y / rect.height) * 8;
+    const tiltY =  (x / rect.width)  * 8;
+    wrapper.style.transform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
   });
 
   wrapper.addEventListener('mouseleave', () => {
