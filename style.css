@@ -73,249 +73,400 @@
   --radius-full: 9999px;
 }
 
-/* Light Mode Overrides */
-[data-theme="light"] {
-  --bg-page:          #ECEEF5;
-  --bg-primary:       #ECEEF5;
-  --bg-secondary:     #E4E7F0;
-  --bg-tertiary:      #DBDEE8;
-  --bg-card:          #FFFFFF;
-  --bg-nav:           #FFFFFF;
-  --text-primary:     #111111;
-  --text-secondary:   #444444;
-  --text-muted:       #777777;
-  --border-color:     rgba(0,0,0,0.10);
-  --border-hover:     rgba(0,0,0,0.14);
-  --bg-card-hover:    rgba(255, 255, 255, 0.95);
-  --border-glass:     rgba(0,0,0,0.10);
-  --nav-bg:           rgba(255, 255, 255, 0.92);
+/* ============================================
+   LIGHT MODE — COMPLETE OVERRIDE
+   ============================================ */
 
-  --shadow-sm:        0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md:        0 8px 32px rgba(0, 0, 0, 0.06);
-  --shadow-lg:        0 16px 64px rgba(0, 0, 0, 0.07);
-  --shadow-glow:      0 0 40px rgba(232, 160, 32, 0.12);
+[data-theme="light"] {
+  --bg-primary:    #ECEEF5;
+  --bg-secondary:  #E4E7F0;
+  --bg-tertiary:   #DBDEE8;
+  --card-bg:       #FFFFFF;
+  --bg-card:       #FFFFFF;
+  --bg-card-hover: #F8F8FC;
+  --nav-bg:        rgba(255,255,255,0.92);
+  --border-color:  rgba(0,0,0,0.09);
+  --border-glass:  rgba(0,0,0,0.09);
+  --text-primary:  #111111;
+  --text-secondary:#4A4A5A;
+  --text-muted:    #7A7A8A;
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md:     0 8px 32px rgba(0,0,0,0.07);
+  --shadow-lg:     0 16px 64px rgba(0,0,0,0.09);
+  --shadow-glow:   0 0 40px rgba(232,160,32,0.10);
 }
 
-/* ==========================================
-   PART 1 — BACKGROUND & CARD CONTRAST
-   ========================================== */
+[data-theme="light"] body {
+  background-color: #ECEEF5;
+  color: #111111;
+}
+
+/* --- Cards --- */
 [data-theme="light"] .glass-card,
-[data-theme="light"] .bento-card,
 [data-theme="light"] .role-card,
 [data-theme="light"] .info-card,
 [data-theme="light"] .career-goal,
+[data-theme="light"] .bento-card,
 [data-theme="light"] .project-card,
 [data-theme="light"] .timeline-content,
 [data-theme="light"] .contact-item,
 [data-theme="light"] .contact-form,
-[data-theme="light"] .contact-form-wrapper,
-[data-theme="light"] [class*="card"] {
+[data-theme="light"] .contact-form-wrapper {
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(0, 0, 0, 0.10) !important;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(0,0,0,0.09) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
 }
 
 [data-theme="light"] .glass-card:hover,
-[data-theme="light"] .bento-card:hover,
 [data-theme="light"] .role-card:hover,
-[data-theme="light"] .info-card:hover,
-[data-theme="light"] .career-goal:hover,
-[data-theme="light"] .project-card:hover,
-[data-theme="light"] .timeline-content:hover,
-[data-theme="light"] .contact-item:hover,
-[data-theme="light"] .contact-form:hover,
-[data-theme="light"] .contact-form-wrapper:hover,
-[data-theme="light"] [class*="card"]:hover {
-  background: #FFFFFF !important;
-  border-color: rgba(0, 0, 0, 0.14) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+[data-theme="light"] .bento-card:hover,
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10) !important;
+  border-color: rgba(0,0,0,0.14) !important;
 }
 
-/* ==========================================
-   PART 2 — TYPOGRAPHY VISIBILITY
-   ========================================== */
+/* --- Headings --- */
 [data-theme="light"] h1,
 [data-theme="light"] h2,
 [data-theme="light"] h3,
 [data-theme="light"] h4 {
+  color: #111111;
+}
+
+/* --- Body copy only (surgical, not all spans/p) --- */
+[data-theme="light"] .hero-intro,
+[data-theme="light"] .about-description,
+[data-theme="light"] .roles-intro,
+[data-theme="light"] .project-desc,
+[data-theme="light"] .timeline-desc,
+[data-theme="light"] .role-desc,
+[data-theme="light"] .contact-info > p,
+[data-theme="light"] .career-goal p {
+  color: #4A4A5A !important;
+}
+
+/* --- Muted text --- */
+[data-theme="light"] .timeline-institution,
+[data-theme="light"] .contact-label,
+[data-theme="light"] .footer-location,
+[data-theme="light"] .footer-copy,
+[data-theme="light"] .footer-built,
+[data-theme="light"] .info-card p {
+  color: #7A7A8A !important;
+}
+
+/* --- Card titles --- */
+[data-theme="light"] .project-title,
+[data-theme="light"] .role-title,
+[data-theme="light"] .timeline-header h3,
+[data-theme="light"] .contact-info h2,
+[data-theme="light"] .info-card h4,
+[data-theme="light"] .bento-card-title,
+[data-theme="light"] .footer-tagline {
   color: #111111 !important;
 }
 
-[data-theme="light"] p,
-[data-theme="light"] li,
-[data-theme="light"] span {
-  color: #444444 !important;
+/* --- Gradient text — keep working --- */
+[data-theme="light"] .gradient-text {
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
 
-[data-theme="light"] ::placeholder,
-[data-theme="light"] input::placeholder,
-[data-theme="light"] textarea::placeholder {
-  color: #999999 !important;
+[data-theme="light"] .hero-name {
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* --- Section tag pills --- */
+[data-theme="light"] .section-tag {
+  background: #1C1C1C !important;
+  color: #E8FF47 !important;
+  -webkit-text-fill-color: #E8FF47 !important;
+  border-color: transparent !important;
+}
+
+/* --- Dot accent --- */
+[data-theme="light"] .dot {
+  color: var(--accent-secondary) !important;
+}
+
+/* --- Navbar --- */
+[data-theme="light"] .navbar {
+  background: rgba(255,255,255,0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.07) !important;
+}
+
+[data-theme="light"] .nav-logo {
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+}
+
+[data-theme="light"] .logo-bracket {
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
 
 [data-theme="light"] .nav-link {
-  color: #111111 !important;
+  color: #4A4A5A !important;
+  -webkit-text-fill-color: #4A4A5A !important;
 }
 
 [data-theme="light"] .nav-link:hover,
 [data-theme="light"] .nav-link.active {
-  color: var(--color-primary) !important;
+  color: var(--accent-secondary) !important;
+  -webkit-text-fill-color: var(--accent-secondary) !important;
 }
 
-[data-theme="light"] .nav-logo .gradient-text {
-  background: none !important;
-  -webkit-text-fill-color: #111111 !important;
+[data-theme="light"] .theme-btn {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0,0,0,0.10) !important;
   color: #111111 !important;
-  background-clip: unset !important;
 }
 
-/* ==========================================
-   PART 3 — SECTION LABEL PILLS FIX
-   ========================================== */
-[data-theme="light"] .section-tag {
-  background: #1A1A1A !important;
-  color: #E8FF47 !important;
-  border: none !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  padding: 5px 14px !important;
-  border-radius: 999px !important;
-  letter-spacing: 0.06em !important;
+[data-theme="light"] .availability-badge {
+  background: #EEFBE8 !important;
+  border-color: rgba(29,111,43,0.25) !important;
 }
 
-/* ==========================================
-   PART 4 — SECTION BACKGROUNDS
-   ========================================== */
+[data-theme="light"] .availability-badge .badge-text {
+  color: #1D6F2B !important;
+  -webkit-text-fill-color: #1D6F2B !important;
+}
+
+[data-theme="light"] .pulse-dot {
+  background: #1D6F2B !important;
+}
+
+/* --- Hamburger bars --- */
+[data-theme="light"] .bar {
+  background: #111111 !important;
+}
+
+/* --- Mobile nav drawer --- */
+[data-theme="light"] .nav-links {
+  background: rgba(255,255,255,0.96) !important;
+  border-left-color: rgba(0,0,0,0.07) !important;
+}
+
+/* --- Hero section --- */
 [data-theme="light"] .hero,
 [data-theme="light"] #home {
   background: #ECEEF5 !important;
 }
 
-[data-theme="light"] #about,
-[data-theme="light"] .roles {
-  background: #E4E7F0 !important;
+[data-theme="light"] .hero-greeting {
+  color: var(--accent-secondary) !important;
+  -webkit-text-fill-color: var(--accent-secondary) !important;
 }
 
-[data-theme="light"] #detailed-about,
-[data-theme="light"] .about {
-  background: #ECEEF5 !important;
+[data-theme="light"] .hero-title {
+  color: #4A4A5A !important;
+  -webkit-text-fill-color: #4A4A5A !important;
 }
 
-[data-theme="light"] #skills,
-[data-theme="light"] .skills {
-  background: #ECEEF5 !important;
+[data-theme="light"] .cursor {
+  color: var(--accent-primary) !important;
+  -webkit-text-fill-color: var(--accent-primary) !important;
 }
 
-[data-theme="light"] #projects,
-[data-theme="light"] .projects {
-  background: #E4E7F0 !important;
-}
-
-[data-theme="light"] #resume,
-[data-theme="light"] .resume {
-  background: #ECEEF5 !important;
-}
-
-[data-theme="light"] #contact,
-[data-theme="light"] .contact {
-  background: #E4E7F0 !important;
-}
-
-/* ==========================================
-   PART 5 — BENTO GRID CARD LABELS & CHIPS
-   ========================================== */
-[data-theme="light"] .bento-card-title {
-  color: #111111 !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  letter-spacing: 0.08em !important;
-}
-
-[data-theme="light"] .skill-chip {
-  background: #F0F2F8 !important;
-  border: 1.5px solid rgba(0,0,0,0.12) !important;
-  color: #222222 !important;
-  border-radius: 999px !important;
-  padding: 5px 12px !important;
-  font-size: 13px !important;
-}
-
-/* ==========================================
-   PART 6 — NAVBAR
-   ========================================== */
-[data-theme="light"] .navbar {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-}
-
-[data-theme="light"] .availability-badge {
-  background: #EEFBE8 !important;
-  color: #1D6F2B !important;
-  border: 1px solid rgba(29,111,43,0.25) !important;
-}
-
-[data-theme="light"] .availability-badge .pulse-dot {
-  background: #1D6F2B !important;
-}
-
-/* ==========================================
-   PART 7 — TIMELINE CARDS
-   ========================================== */
-[data-theme="light"] .timeline::before {
-  background: #CCCCCC !important;
-}
-
-[data-theme="light"] .timeline-content {
+[data-theme="light"] .social-icon {
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(0,0,0,0.10) !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+  border-color: rgba(0,0,0,0.09) !important;
+  color: #4A4A5A !important;
+}
+
+[data-theme="light"] .scroll-down {
+  border-color: rgba(0,0,0,0.15) !important;
+}
+
+/* --- Section backgrounds (alternating) --- */
+[data-theme="light"] .roles,
+[data-theme="light"] #about {
+  background: #E4E7F0 !important;
+}
+
+[data-theme="light"] .about,
+[data-theme="light"] #detailed-about {
+  background: #ECEEF5 !important;
+}
+
+[data-theme="light"] .skills,
+[data-theme="light"] #skills {
+  background: #E4E7F0 !important;
+}
+
+[data-theme="light"] .projects,
+[data-theme="light"] #projects {
+  background: #ECEEF5 !important;
+}
+
+[data-theme="light"] .resume,
+[data-theme="light"] #resume {
+  background: #E4E7F0 !important;
+}
+
+[data-theme="light"] .contact,
+[data-theme="light"] #contact {
+  background: #ECEEF5 !important;
+}
+
+[data-theme="light"] .footer {
+  background: #E4E7F0 !important;
+  border-top-color: rgba(0,0,0,0.07) !important;
+}
+
+/* --- Skill chips --- */
+[data-theme="light"] .skill-chip {
+  background: #F0F2FA !important;
+  border-color: rgba(0,0,0,0.10) !important;
+  color: #222233 !important;
+  -webkit-text-fill-color: #222233 !important;
+}
+
+[data-theme="light"] .skill-chip i {
+  color: var(--accent-secondary) !important;
+  -webkit-text-fill-color: var(--accent-secondary) !important;
+}
+
+/* --- Tech tags --- */
+[data-theme="light"] .tech-tag {
+  background: rgba(255,107,53,0.08) !important;
+  border-color: rgba(255,107,53,0.20) !important;
+  color: var(--accent-secondary) !important;
+  -webkit-text-fill-color: var(--accent-secondary) !important;
+}
+
+/* --- Project outcome line --- */
+[data-theme="light"] .project-outcome {
+  color: #C05A10 !important;
+  -webkit-text-fill-color: #C05A10 !important;
+}
+
+/* --- Bento bg icon --- */
+[data-theme="light"] .bento-bg-icon {
+  color: rgba(0,0,0,0.06) !important;
+}
+
+/* --- IN PROGRESS badge --- */
+[data-theme="light"] .badge-inprogress {
+  background: rgba(255,107,53,0.10) !important;
+  color: var(--accent-secondary) !important;
+  -webkit-text-fill-color: var(--accent-secondary) !important;
+  border-color: rgba(255,107,53,0.25) !important;
+}
+
+/* --- Timeline --- */
+[data-theme="light"] .timeline::before {
+  background: linear-gradient(to bottom, var(--accent-secondary), transparent) !important;
+}
+
+[data-theme="light"] .timeline-dot {
+  border-color: #E4E7F0 !important;
 }
 
 [data-theme="light"] .timeline-date {
   background: #FFF3CD !important;
   color: #7A4F00 !important;
-  border: 1px solid rgba(122,79,0,0.2) !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  padding: 3px 10px !important;
-  border-radius: 999px !important;
+  -webkit-text-fill-color: #7A4F00 !important;
+  border-color: rgba(122,79,0,0.18) !important;
 }
 
-/* ==========================================
-   PART 8 — CONTACT SECTION
-   ========================================== */
-[data-theme="light"] .contact-item {
-  background: #FFFFFF !important;
-  border: 1.5px solid rgba(0,0,0,0.10) !important;
-}
-
-[data-theme="light"] .contact-form-wrapper {
-  background: #FFFFFF !important;
-  border: 1.5px solid rgba(0,0,0,0.10) !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
-}
-
+/* --- Contact form inputs --- */
 [data-theme="light"] .input-wrapper input,
 [data-theme="light"] .input-wrapper textarea {
-  background: #F5F6FA !important;
-  border: 1.5px solid rgba(0,0,0,0.12) !important;
+  background: #F0F2FA !important;
+  border-color: rgba(0,0,0,0.10) !important;
   color: #111111 !important;
-  border-radius: 8px !important;
+  -webkit-text-fill-color: #111111 !important;
 }
 
 [data-theme="light"] .input-wrapper input:focus,
 [data-theme="light"] .input-wrapper textarea:focus {
-  border-color: #E8A020 !important;
-  outline: none !important;
-  box-shadow: 0 0 0 3px rgba(232,160,32,0.15) !important;
+  border-color: var(--accent-secondary) !important;
+  background: #FFF8F5 !important;
+  box-shadow: 0 0 0 3px rgba(255,107,53,0.12) !important;
 }
 
-/* Back to Top button */
+[data-theme="light"] .form-group label {
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+}
+
+[data-theme="light"] .input-wrapper i {
+  color: #7A7A8A !important;
+}
+
+/* --- Footer --- */
+[data-theme="light"] .footer-social-icon {
+  color: #4A4A5A !important;
+}
+
+[data-theme="light"] .footer-divider {
+  background-color: rgba(0,0,0,0.08) !important;
+}
+
+/* --- Back to top --- */
 [data-theme="light"] .back-to-top {
-  background: var(--text-primary);
-  color: #ECEEF5;
+  background: var(--grad-primary) !important;
+  color: #111111 !important;
+}
+
+/* --- Scroll progress bar --- */
+[data-theme="light"] #scroll-progress {
+  background: var(--grad-primary) !important;
+}
+
+/* --- About image badge --- */
+[data-theme="light"] .about-badge {
+  background: var(--grad-primary) !important;
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+}
+
+/* --- Info card icons --- */
+[data-theme="light"] .info-card i,
+[data-theme="light"] .career-goal i {
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* --- Contact item icons --- */
+[data-theme="light"] .contact-item i {
+  background: var(--grad-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* --- Contact item links --- */
+[data-theme="light"] .contact-item a {
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+}
+
+[data-theme="light"] .contact-item a:hover {
+  color: var(--accent-secondary) !important;
+  -webkit-text-fill-color: var(--accent-secondary) !important;
+}
+
+/* --- Blobs in light mode --- */
+[data-theme="light"] .blob {
+  opacity: 0.07 !important;
+}
+
+/* --- Scroll down dot --- */
+[data-theme="light"] .scroll-dot {
+  background: var(--accent-secondary) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -746,7 +897,7 @@ button {
   animation: float 12s ease-in-out infinite;
 }
 
-[data-theme="light"] .blob { opacity: 0.12; }
+[data-theme="light"] .blob { opacity: 0.07 !important; }
 
 .blob-1 {
   width: 600px; height: 600px;
@@ -790,7 +941,6 @@ button {
   z-index: 1;
 }
 
-/* Prompt 13: Photo column — RIGHT side, rectangular */
 .hero-image {
   order: 2;
   display: flex;
@@ -804,7 +954,6 @@ button {
   max-width: 380px;
 }
 
-/* Prompt 13: decorative glow */
 .hero-photo-glow {
   position: absolute;
   top: 50%; left: 50%;
@@ -816,7 +965,6 @@ button {
   z-index: 0;
 }
 
-/* Prompt 13: rectangular photo, no ring */
 .profile-img {
   width: 100%;
   border-radius: 16px;
@@ -829,7 +977,6 @@ button {
 }
 
 .profile-img:hover { transform: scale(1.02); }
-
 
 /* Hero Text */
 .hero-text {
@@ -1178,7 +1325,6 @@ button {
   box-shadow: var(--shadow-md);
 }
 
-/* Card titles */
 .bento-card-title {
   font-family: var(--font-heading);
   font-weight: 600;
@@ -1189,7 +1335,6 @@ button {
   margin: 0;
 }
 
-/* Background Icons */
 .bento-bg-icon {
   position: absolute;
   bottom: -20px;
@@ -1207,20 +1352,17 @@ button {
   opacity: 0.08;
 }
 
-/* Ensure content is above bg icon */
 .bento-card-header,
 .bento-card .chips-container {
   position: relative;
   z-index: 1;
 }
 
-/* Dash style for currently learning */
 .bento-card.bento-dashed {
   border-style: dashed;
   border-width: 1.5px;
 }
 
-/* Badge styles */
 .title-with-badge {
   display: flex;
   align-items: center;
@@ -1251,7 +1393,6 @@ button {
   50% { opacity: 0.7; }
 }
 
-/* Card grid spans */
 .bento-frontend {
   grid-column: span 3;
   grid-row: span 2;
@@ -1315,7 +1456,6 @@ button {
   transform: scale(1.15);
 }
 
-/* Custom hover colors for specific skills */
 .skill-chip.html5:hover { border-color: #ff5722; color: #ff5722; background: rgba(255, 87, 34, 0.08); }
 .skill-chip.css3:hover { border-color: #2196f3; color: #2196f3; background: rgba(33, 150, 243, 0.08); }
 .skill-chip.javascript:hover { border-color: #ffc107; color: #ffc107; background: rgba(255, 193, 7, 0.08); }
@@ -1346,12 +1486,15 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
 .project-card {
   overflow: hidden;
   padding: 0;
-  /* Prompt 8: card hover lift */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -1377,7 +1520,6 @@ button {
 
 .project-card:hover .project-img { transform: scale(1.06); }
 
-/* Prompt 8: new overlay style */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -1401,7 +1543,12 @@ button {
 .project-card:hover .project-overlay,
 .project-card:focus .project-overlay { opacity: 1; }
 
-.project-info { padding: 1.5rem; }
+.project-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
 .project-title {
   font-family: var(--font-display);
@@ -1419,7 +1566,6 @@ button {
   max-width: 65ch;
 }
 
-/* Prompt 9: outcome metric line */
 .project-outcome {
   font-size: 13px;
   font-weight: 500;
@@ -1446,6 +1592,10 @@ button {
   border-radius: var(--radius-full);
 }
 
+.project-info .btn {
+  margin-top: auto;
+}
+
 /* --------------------------------------------------------------------------
    12. Resume Section
    -------------------------------------------------------------------------- */
@@ -1454,7 +1604,6 @@ button {
   margin-bottom: 3.5rem;
 }
 
-/* Timeline */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -1660,12 +1809,6 @@ button {
   box-shadow: 0 0 0 3px rgba(232, 255, 71, 0.15);
 }
 
-.input-wrapper input:focus + i,
-.input-wrapper textarea:focus + i {
-  color: var(--color-primary);
-}
-
-/* Focus icon fix — icon comes before input in DOM via CSS trick */
 .input-wrapper:focus-within i { color: var(--color-primary); }
 
 .error-msg {
@@ -1676,14 +1819,12 @@ button {
   min-height: 1rem;
 }
 
-/* Input error state */
 .input-wrapper input.error,
 .input-wrapper textarea.error {
   border-color: #f5576c;
   box-shadow: 0 0 0 3px rgba(245, 87, 108, 0.15);
 }
 
-/* Form Success */
 .form-success {
   margin-top: 1rem;
   padding: 1rem 1.25rem;
@@ -1832,7 +1973,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   15. Scroll Reveal Animation
+   16. Scroll Reveal Animation
    -------------------------------------------------------------------------- */
 .reveal {
   opacity: 0;
@@ -1845,7 +1986,6 @@ button {
   transform: translateY(0);
 }
 
-/* Stagger delay for grid items */
 .bento-card:nth-child(2) { transition-delay: 0.05s; }
 .bento-card:nth-child(3) { transition-delay: 0.10s; }
 .bento-card:nth-child(4) { transition-delay: 0.15s; }
@@ -1855,27 +1995,22 @@ button {
 .project-card:nth-child(3) { transition-delay: 0.20s; }
 
 /* --------------------------------------------------------------------------
-   16. Responsive Breakpoints
+   17. Responsive Breakpoints
    -------------------------------------------------------------------------- */
 
-/* ----- Tablet: max-width 1024px ----- */
 @media (max-width: 1024px) {
   :root { --fs-3xl: 2.2rem; --fs-4xl: 3rem; }
-
   .about-grid      { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-image     { max-width: 320px; margin: 0 auto; }
   .contact-grid    { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-container  { gap: 2.5rem; }
 }
 
-/* ----- Mobile: max-width 768px ----- */
 @media (max-width: 768px) {
   :root { --fs-3xl: 1.9rem; --fs-4xl: 2.6rem; }
 
-  /* Hamburger visible */
   .hamburger { display: flex; }
 
-  /* Nav links become mobile dropdown */
   .nav-links {
     position: fixed;
     top: 0; right: -100%;
@@ -1909,36 +2044,23 @@ button {
   }
 
   .hero { padding: 5rem 1.5rem 4rem; }
-
   .hero-container { flex-direction: column; text-align: center; gap: 2rem; }
-
   .hero-image { order: -1; }
   .hero-text { order: 1; }
-
   .image-wrapper { width: 280px; height: auto; max-width: 100%; margin: 0 auto; }
-
   .hero-buttons, .hero-socials { justify-content: center; }
-
   .about-info-cards { grid-template-columns: 1fr; }
-
   .roles-grid { grid-template-columns: 1fr; }
-
   .skills-bento { grid-template-columns: 1fr 1fr; gap: 12px; }
   .bento-card { grid-column: span 2 !important; grid-row: span 1 !important; }
-
   .projects-grid { grid-template-columns: 1fr; }
-
-  /* Hide availability badge on mobile */
   .availability-badge { display: none; }
-
   .timeline::before { left: 12px; }
   .timeline-item    { padding-left: 2.5rem; }
   .timeline-dot     { left: 3px; }
-
   .section-title { font-size: var(--fs-2xl); }
 }
 
-/* ----- Small Mobile: max-width 480px ----- */
 @media (max-width: 480px) {
   .btn { padding: 0.65rem 1.4rem; font-size: var(--fs-xs); }
   .hero-name { font-size: var(--fs-3xl); }
@@ -1948,7 +2070,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   17. Accessibility & Reduced Motion
+   18. Accessibility & Reduced Motion
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1959,7 +2081,6 @@ button {
   html { scroll-behavior: auto; }
 }
 
-/* Focus visible for keyboard users */
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
