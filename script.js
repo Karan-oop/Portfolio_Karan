@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 /* ==========================================================================
    2. Navbar — Scroll Effect & Active Link Highlighting
    ========================================================================== */
